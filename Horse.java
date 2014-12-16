@@ -1,3 +1,5 @@
+
+
 import org.asl.karelx.Wanderer;
 
 /**
@@ -7,6 +9,9 @@ import org.asl.karelx.Wanderer;
 public class Horse extends Wanderer {
 
 	//  TODO Add one or more constructors, as needed
+	public Horse(){
+	    super(int i, int j);
+	   }
 	
 	/**
 	 * Wander around in random directions until a specified number of steps have been taken.
@@ -19,5 +24,12 @@ public class Horse extends Wanderer {
 	 */
 	public void wander(int count, int timer) {
 		// TODO You implement this
+		int counter = 0;
+		while(counter < count){
+		    for(int i = 0; i < timer; i++){
+		        wander();
+		        count++;
+		
+		
 	}
 }

@@ -1,3 +1,5 @@
+
+
 import org.asl.karelx.Farmer;
 
 /**
@@ -6,7 +8,9 @@ import org.asl.karelx.Farmer;
  */
 public class BeepFarmer extends Farmer {
 
-	//  TODO Add one or more constructors, as needed
+	Public BeepFarmer(){
+	    super(int x, int y, 0);
+	   }
 	
 	/**
 	 * Access all locations in a rectangular garden and pick up any beepers found
@@ -19,8 +23,19 @@ public class BeepFarmer extends Farmer {
 	 * Ex. reap(7, 4) should gather all beepers from an area 7 rows wide and 4 rows tall
 	 */
 	public void reap(int width, int height) {
+	    int counter = 0;
+	    if(nextToABeeper()){
+	        pickBeeper();
+	       }
+	    while(counter<height){
+	        move();
+	        counter++;
+	        while(nextToABeeper()){
+	            pickBeeper();
+	           }
 		// TODO You implement this
 	}
+	
 	
 	/**
 	 * Access all locations in a rectangular garden and plant one beeper at each location
